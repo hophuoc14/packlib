@@ -3,9 +3,9 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/dzungtran/echo-rest-api/config"
-	"github.com/dzungtran/echo-rest-api/modules/core/usecases"
-	"github.com/dzungtran/echo-rest-api/pkg/middlewares"
+	"github.com/hophuoc14/packlib/config"
+	"github.com/hophuoc14/packlib/modules/core/usecases"
+	"github.com/hophuoc14/packlib/pkg/middlewares"
 	"github.com/labstack/echo/v4"
 )
 

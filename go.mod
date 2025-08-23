@@ -1,4 +1,4 @@
-module github.com/dzungtran/echo-rest-api
+module github.com/hophuoc14/packlib
 
 go 1.21
 

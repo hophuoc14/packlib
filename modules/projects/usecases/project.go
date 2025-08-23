@@ -3,12 +3,12 @@ package usecases
 import (
 	"context"
 
-	"github.com/dzungtran/echo-rest-api/modules/projects/domains"
-	"github.com/dzungtran/echo-rest-api/modules/projects/dto"
-	"github.com/dzungtran/echo-rest-api/modules/projects/pkg/cue"
-	"github.com/dzungtran/echo-rest-api/modules/projects/repositories"
-	"github.com/dzungtran/echo-rest-api/pkg/contexts"
-	"github.com/dzungtran/echo-rest-api/pkg/utils"
+	"github.com/hophuoc14/packlib/modules/projects/domains"
+	"github.com/hophuoc14/packlib/modules/projects/dto"
+	"github.com/hophuoc14/packlib/modules/projects/pkg/cue"
+	"github.com/hophuoc14/packlib/modules/projects/repositories"
+	"github.com/hophuoc14/packlib/pkg/contexts"
+	"github.com/hophuoc14/packlib/pkg/utils"
 	"github.com/jinzhu/copier"
 )
 

@@ -4,7 +4,7 @@ Copyright © 2022 Dzung Tran hello@iamdzung.com
 package main
 
 import (
-	"github.com/dzungtran/echo-rest-api/tools/mod/cmd"
+	"github.com/hophuoc14/packlib/tools/mod/cmd"
 )
 
 func main() {

@@ -1,9 +1,9 @@
-[![Build Status](https://app.travis-ci.com/dzungtran/echo-rest-api.svg?branch=main)](https://app.travis-ci.com/dzungtran/echo-rest-api)
-[![codecov](https://codecov.io/gh/dzungtran/echo-rest-api/branch/main/graph/badge.svg?token=hxaHIVyoBN)](https://codecov.io/gh/dzungtran/echo-rest-api)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/dzungtran/echo-rest-api/blob/master/LICENSE)
-[![Go Reference](https://pkg.go.dev/badge/github.com/dzungtran/echo-rest-api.svg)](https://pkg.go.dev/github.com/dzungtran/echo-rest-api)
-[![GoReportCard Badge](https://goreportcard.com/badge/github.com/dzungtran/echo-rest-api)](https://goreportcard.com/report/github.com/dzungtran/echo-rest-api)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/dzungtran/echo-rest-api.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/dzungtran/echo-rest-api/alerts/)
+[![Build Status](https://app.travis-ci.com/hophuoc14/packlib.svg?branch=main)](https://app.travis-ci.com/hophuoc14/packlib)
+[![codecov](https://codecov.io/gh/hophuoc14/packlib/branch/main/graph/badge.svg?token=hxaHIVyoBN)](https://codecov.io/gh/hophuoc14/packlib)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/hophuoc14/packlib/blob/master/LICENSE)
+[![Go Reference](https://pkg.go.dev/badge/github.com/hophuoc14/packlib.svg)](https://pkg.go.dev/github.com/hophuoc14/packlib)
+[![GoReportCard Badge](https://goreportcard.com/badge/github.com/hophuoc14/packlib)](https://goreportcard.com/report/github.com/hophuoc14/packlib)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/hophuoc14/packlib.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/hophuoc14/packlib/alerts/)
 
 # Echo REST API boilerplate
 
@@ -11,7 +11,7 @@ A Golang restful API boilerplate based on Echo framework v4. Includes tools for 
 Any feedback and pull requests are welcome and highly appreciated. Feel free to open issues just for comments and discussions.
 
 <!--toc-->
-- [Echo REST API boilerplate](#echo-rest-api-boilerplate)
+- [Echo REST API boilerplate](#packlib-boilerplate)
   - [HOW TO USE THIS TEMPLATE](#how-to-use-this-template)
   - [Overview](#overview)
   - [Features](#features)
@@ -27,9 +27,9 @@ Any feedback and pull requests are welcome and highly appreciated. Feel free to 
 
 ## HOW TO USE THIS TEMPLATE
 
-> **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/dzungtran/echo-rest-api/generate)** feature.
+> **DO NOT FORK** this is meant to be used from **[Use this template](https://github.com/hophuoc14/packlib/generate)** feature.
 
-1. Click on **[Use this template](https://github.com/dzungtran/echo-rest-api/generate)**
+1. Click on **[Use this template](https://github.com/hophuoc14/packlib/generate)**
 2. Give a name to your project  
    (e.g. `my_awesome_project` recommendation is to use all lowercase and underscores separation for repo names.)
 3. Wait until the first run of CI finishes  
