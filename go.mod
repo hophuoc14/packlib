@@ -24,7 +24,7 @@ require (
 	github.com/swaggo/echo-swagger v1.4.1
 	github.com/swaggo/swag v1.16.2
 	github.com/tidwall/sjson v1.2.5
-	go.uber.org/dig v1.17.1
+	go.uber.org/dig v1.19.0
 	go.uber.org/zap v1.27.0
 	golang.org/x/exp v0.0.0-20231226003508-02704c960a9b
 	google.golang.org/api v0.170.0
