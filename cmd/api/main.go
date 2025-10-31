@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"packlib/cmd/api/handlers"
+	"packlib/cmd/api/middlewares"
 	"packlib/common"
 
 	"github.com/joho/godotenv"
@@ -39,9 +40,9 @@ func main() {
 		server: e,
 		handler: handler,
 	}
-	e.Use(middleware.Logger())
+	e.Use(middleware.Logger(), middlewares.CustomMiddleware, middlewares.AnotherMiddleware)
 
-app.routes()
+	app.routes()
 	fmt.Println(app)
 	port := os.Getenv("APP_PORT")
 	if port == "" {
