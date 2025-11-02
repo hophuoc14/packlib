@@ -40,3 +40,4 @@ logs.log
 images/**.png
 
 .env
+.vscode/
