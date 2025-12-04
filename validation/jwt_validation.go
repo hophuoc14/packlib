@@ -26,4 +26,13 @@ func CreateToken(user entity.User) (string, error) {
 			ExpiresAt: time.Now().Add(time.Hour * 24).Unix(),
 		},
 	}
+
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+
+	accessToken, err := token.SignedString([]byte(configuration.Get("JWT_SECRET")))
+	if err != nil {
+		return "", err
+	}
+
+	return accessToken, nil
 }
