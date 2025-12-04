@@ -1,6 +1,8 @@
 package service
 
 import (
+	"packlib/entity"
+	"packlib/exception"
 	"packlib/model"
 	"packlib/repository"
 	"packlib/validation"
@@ -24,7 +26,10 @@ func (service *UserServiceImpl) Register(request model.CreateUserRequest) (model
 }
 
 func (service *UserServiceImpl) Login(request model.CreateUserRequest) (model.LoginSuccessResponse, error) {
-	
+	user, err := service.userRepository.Login(request.Username, request.Password)
+	exception.PanicNeeded(err)
+
+	// token, er = 
 }
 
 func (service *UserServiceImpl) FindUserByUsername(username string) (model.GetUserResponse, error) {
