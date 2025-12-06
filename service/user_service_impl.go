@@ -50,7 +50,7 @@ func (service *UserServiceImpl) Register(request model.CreateUserRequest) (model
 	}, nil
 }
 
-func (service *UserServiceImpl) Login(request model.CreateUserRequest) (model.LoginSuccessResponse, error) {
+func (service *UserServiceImpl) Login(request model.LoginRequest) (model.LoginSuccessResponse, error) {
 	user, err := service.userRepository.Login(request.Username, request.Password)
 	exception.PanicNeeded(err)
 
