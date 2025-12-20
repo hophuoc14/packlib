@@ -1,9 +1,12 @@
 package repository
 
-import "packlib/entity"
+import (
+	"packlib/entity"
+	"packlib/model"
+)
 
 type DepartmentFindParams struct {
-	BaseQueryParams
+	model.BaseQueryParams
 	Name *string
 }
 
