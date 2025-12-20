@@ -6,13 +6,12 @@ import (
 
 	"gorm.io/gorm"
 )
-
-func NewUserRepository(database *gorm.DB) UserRepository {
-	return &UserRepositoryImpl{database: database}
+type UserRepositoryImpl struct {
+	BaseRepository
 }
 
-type UserRepositoryImpl struct {
-	database *gorm.DB
+func NewUserRepository(database *gorm.DB) UserRepository {
+	return &UserRepositoryImpl{BaseRepository: BaseRepository{database: database}}
 }
 
 func (repository *UserRepositoryImpl) Insert(param entity.User) (entity.User, error) {

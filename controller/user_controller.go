@@ -17,9 +17,9 @@ func NewUserController(userService service.UserService) UserController {
 	return UserController{userService: userService}
 }
 
-func (controller *UserController) Route(app *echo.Echo) {
-	app.POST("/register", controller.Register)
-	app.POST("/login", controller.Login)
+func (controller *UserController) Route(g *echo.Group) {
+	g.POST("/register", controller.Register)
+	g.POST("/login", controller.Login)
 }
 
 func (controller *UserController) Register(c echo.Context) error {
