@@ -1,6 +1,7 @@
 package controller
 
 import (
+	"fmt"
 	"net/http"
 	"packlib/model"
 	"packlib/service"
@@ -74,6 +75,7 @@ func (controller *UserController) Login(c echo.Context) error {
 			Data:    nil,
 		})
 	}
+	fmt.Println(request, "come???")
 
 	response, err := controller.userService.Login(request)
 	if err != nil {

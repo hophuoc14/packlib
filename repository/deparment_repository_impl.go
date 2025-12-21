@@ -24,18 +24,18 @@ func (repository *DepartmentRepositoryImpl) Insert(param entity.Department) (ent
 	return param, nil
 }
 
-func (repository *DepartmentRepositoryImpl) Update(param entity.Department) (entity.Department, error) {
+func (repository *DepartmentRepositoryImpl) Update(param entity.Department) (*entity.Department, error) {
 	var updatedDepartment entity.Department
 
 	repository.database.Save(&param).First(&updatedDepartment)
-	return updatedDepartment, nil
+	return &updatedDepartment, nil
 }
 
 func (repository *DepartmentRepositoryImpl) Delete(param entity.Department) error {
 	return repository.database.Delete(&param).Error
 }
 
-func (repository *DepartmentRepositoryImpl) Find(param DepartmentFindParams) (*entity.Department, error) {
-	var department entity.Department
-	return &department, repository.database.Where("name = ?", param.Name).Preload("Employee").First(&department).Error
+func (repository *DepartmentRepositoryImpl) Find(param DepartmentFindParams) ([]entity.Department, error) {
+	var departments []entity.Department
+	return departments, repository.database.Where("name = ?", param.Name).Preload("Employee").Find(&departments).Error
 }

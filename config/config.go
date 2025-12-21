@@ -21,6 +21,6 @@ func New(fileNames ...string) Config {
 	if err != nil {
 		panic("Error loading .env file")
 	}
-	
+
 	return &configImpl{}
 }

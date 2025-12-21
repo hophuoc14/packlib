@@ -12,15 +12,16 @@ var database *gorm.DB
 
 func NewPostgresDatabase(configuration Config) (*gorm.DB, error) {
 	dbHost := configuration.Get("DATABASE_HOST")
-	dbPort := configuration.Get("DB_PORT")
-	dbUser := configuration.Get("DB_USER")
-	dbPassword := configuration.Get("DB_PASSWORD")
-	dbName := configuration.Get("DB_NAME")
+	dbPort := configuration.Get("DATABASE_PORT")
+	dbUser := configuration.Get("DATABASE_USERNAME")
+	dbPassword := configuration.Get("DATABASE_PASSWORD")
+	dbName := configuration.Get("DATABASE_NAME")
 
 	dsn := fmt.Sprintf(
 		"host=%s user=%s password=%s dbname=%s port=%s sslmode=disable TimeZone=Asia/Shanghai",
 		dbHost, dbUser, dbPassword, dbName, dbPort,
 	)
+fmt.Println(dsn)
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		return nil, err
