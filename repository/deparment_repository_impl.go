@@ -37,5 +37,13 @@ func (repository *DepartmentRepositoryImpl) Delete(param entity.Department) erro
 
 func (repository *DepartmentRepositoryImpl) Find(param DepartmentFindParams) ([]entity.Department, error) {
 	var departments []entity.Department
-	return departments, repository.database.Where("name = ?", param.Name).Preload("Employee").Find(&departments).Error
+	
+	query := repository.database.Preload("Employees")
+	
+	// Only filter by name if provided
+	if param.Name != nil && *param.Name != "" {
+		query = query.Where("name = ?", *param.Name)
+	}
+	
+	return departments, query.Find(&departments).Error
 }

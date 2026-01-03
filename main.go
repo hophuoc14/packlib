@@ -23,6 +23,9 @@ func main() {
 	userService := service.NewUserService(userRepository)
 	userController := controller.NewUserController(userService)
 	
+	departmentRepository := repository.NewDepartmentRepository(database)
+	departmentService := service.NewDepartmentService(departmentRepository)
+	departmentController := controller.NewDepartmentController(departmentService)
 	
 	e := echo.New()
 	api := e.Group("/api")
@@ -44,7 +47,7 @@ func main() {
 
 	// routing
 	userController.Route(api)
-	
+	departmentController.Route(api)	
 	// start server
 	e.Logger.Fatal(e.Start(":8080"))
 

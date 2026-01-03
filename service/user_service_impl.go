@@ -34,11 +34,13 @@ func (service *UserServiceImpl) Register(request model.CreateUserRequest) (model
 			FullName: request.FullName,
 			Phone: request.Phone,
 			Age: request.Age,
+			Status: "active",
 		},
 	})
 	exception.PanicNeeded(err)
 
 	return model.CreateUserResponse{
+		Id: user.Id,
 		Username: user.Username,
 		Email: user.Email,
 		Employee: model.CreatEmployeeResponse{
