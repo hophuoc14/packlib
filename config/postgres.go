@@ -2,7 +2,8 @@ package config
 
 import (
 	"fmt"
-	"packlib/entity"
+	// "log"
+	// dbmigrate "packlib/db"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -28,11 +29,21 @@ fmt.Println(dsn)
 	}
 	database = db
 
+	// Run migrations
+	_, err = db.DB()
+	if err != nil {
+		return nil, fmt.Errorf("failed to get database instance: %w", err)
+	}
 
-	database.AutoMigrate(&entity.User{})
-	database.AutoMigrate(&entity.Employee{})
-	database.AutoMigrate(&entity.Department{})
-	database.AutoMigrate(&entity.Project{})
+	// Uncomment the following lines to run migrations automatically on startup
+	// You can also run migrations manually using: go run cmd/migrate/main.go up
+	/*
+	if err := dbmigrate.RunMigrations(sqlDB, dbName); err != nil {
+		log.Printf("Warning: Migration failed: %v", err)
+		// Decide whether to fail startup or continue
+		// return nil, err
+	}
+	*/
 
 	return database, nil
 }
